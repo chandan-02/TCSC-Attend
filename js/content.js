@@ -49,7 +49,7 @@ function main(){
             if(ref){
                 count=5;
                 chrome.storage.sync.set({'warning':'true'},()=>console.log("They got our real email"));
-                const reref =  document.querySelector(`[aria-label="Your email address"]`);
+                const reref =  document.querySelector(`[aria-label="Your email"]`);
                 reref.focus();
                 document.execCommand('insertText',true,data.email);
                 console.log("inside if of special email | Count Val :",count )
