@@ -23,17 +23,18 @@ function main(){
         function sleep(ms) {
             return new Promise((resolve) => setTimeout(resolve, ms));
         }
-        var count=0;
+
+        var count=1;
         async function specialEmail() {
-            
             const ref = document.querySelector(`[aria-label="Your email address"]`)
+            console.log("THIS IS : ",ref)
             if(ref){
                 count=5;
                 chrome.storage.sync.set({'warning':'true'},()=>console.log("They got our real email"));
-               
                 const reref =  document.querySelector(`[aria-label="Your email address"]`);
                 reref.focus();
                 document.execCommand('insertText',true,data.email);
+                console.log("inside if of special email | Count Val :",count )
                 } else {
                     count=1;
             }
@@ -138,7 +139,8 @@ function submit(){
         async function waitAndDo() {
             await sleep(7000)
             if(data.status.toLowerCase() == 'enabled'){
-                document.getElementsByClassName("appsMaterialWizButtonEl")[0].click().then(alert("Done"))
+                document.getElementsByClassName("appsMaterialWizButtonEl")[0].click()
+                alert("Done")
             }else{
                console.log("Auto Submit Disabled")
             } 
