@@ -140,7 +140,7 @@ function submit(){
             await sleep(7000)
             if(data.status.toLowerCase() == 'enabled'){
                 document.getElementsByClassName("appsMaterialWizButtonEl")[0].click()
-                alert("Done")
+                console.log("Done")
             }else{
                console.log("Auto Submit Disabled")
             } 
