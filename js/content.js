@@ -43,6 +43,24 @@ function main(){
 
         specialEmail();
 
+        async function specialEmail1() {
+            const ref = document.querySelector(`[aria-label="Your email"]`)
+            console.log("THIS IS : ",ref)
+            if(ref){
+                count=5;
+                chrome.storage.sync.set({'warning':'true'},()=>console.log("They got our real email"));
+                const reref =  document.querySelector(`[aria-label="Your email address"]`);
+                reref.focus();
+                document.execCommand('insertText',true,data.email);
+                console.log("inside if of special email | Count Val :",count )
+                } else {
+                    count=1;
+            }
+            await sleep(1000)
+        }//specialfun()
+
+        specialEmail1();
+
         async function name(){
             for(let i = count ; i <= len ;i+=4){
                 await sleep(1000);
