@@ -1,0 +1,29 @@
+{
+    "name": "TCSC Attend",
+    "version": "1.0",
+    "description": "Mark your Attendence in one click ",
+    "manifest_version": 2,
+    "author":"Chandan",
+    "background": {
+        "scripts": ["./js/background.js"]
+      },
+    "icons":{
+        "128":"./assets/icon128.png",
+        "48":"./assets/icon128.png",
+        "16":"./assets/icon128.png"
+    },
+    "browser_action":{
+        "default_icon":"./assets/icon128.png",
+        "default_popup":"index.html"   
+    },
+    "permissions": [
+        "storage",
+        "activeTab"
+    ],
+      "content_scripts": [
+        {
+          "matches": ["*://docs.google.com/*"],
+          "js": ["./js/content.js"]
+        }
+    ]
+  }
