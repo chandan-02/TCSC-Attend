@@ -5,7 +5,7 @@
 ## Method 1 - with git
 ```
 
-git clone https://github.com/ninjadak1ng/TCSC-Attend.git
+git clone https://github.com/chandan-02/TCSC-Attend.git
 
 ```
 - Open Chrome and type  [chrome://extensions](chrome://extensions) in url
