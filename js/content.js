@@ -30,7 +30,7 @@ function main(){
             console.log("THIS IS : ",ref)
             if(ref){
                 count=5;
-                chrome.storage.sync.set({'warning':'true'},()=>console.log("They got our real email"));
+                chrome.storage.sync.set({'warning':'true'},()=>console.log("They got our real email ogi"));
                 const reref =  document.querySelector(`[aria-label="Your email address"]`);
                 reref.focus();
                 document.execCommand('insertText',true,data.email);
@@ -52,7 +52,7 @@ function main(){
                 const reref =  document.querySelector(`[aria-label="Your email"]`);
                 reref.focus();
                 document.execCommand('insertText',true,data.email);
-                console.log("inside if of special email | Count Val :",count )
+                console.log("inside if of special email1 | Count Val :",count )
                 } else {
                     count=1;
             }
@@ -69,6 +69,7 @@ function main(){
                     const namekeLiye = document.querySelector(`[aria-labelledby=${idMain}]`);
                     namekeLiye.focus();
                     document.execCommand("insertText", false, data.name);
+                    console.log("Name",i)
                     break;
                 }else {
                     console.log("name : Not email/roll")
@@ -86,6 +87,7 @@ function main(){
                     const namekeLiye = document.querySelector(`[aria-labelledby=${idMain}]`);
                     namekeLiye.focus();
                     document.execCommand("insertText", false, data.email);
+                    console.log("Email Normal ",i)
                     break;
                 }else {
                     console.log("email : Not name/roll ")
@@ -103,6 +105,7 @@ function main(){
                     const namekeLiye = document.querySelector(`[aria-labelledby=${idMain}]`);
                     namekeLiye.focus();
                     document.execCommand("insertText", false, data.roll);
+                    console.log("roll",i)
                     break;
                 }else {
                     console.log("roll : Not email/name ")
@@ -120,6 +123,7 @@ function main(){
                     const namekeLiye = document.querySelector(`[aria-labelledby=${idMain}]`);
                     namekeLiye.focus();
                     document.execCommand("insertText", false, data.roll);
+                    console.log("r.no",i)
                     break;
                 }else {
                     console.log("roll : Not email/name ")
@@ -137,6 +141,7 @@ function main(){
                     const namekeLiye = document.querySelector(`[aria-labelledby=${idMain}]`);
                     namekeLiye.focus();
                     document.execCommand("insertText", false, data.div);
+                    console.log("div",i)
                     break;
                 }else {
                     console.log("div : Not email/name/roll ")

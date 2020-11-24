@@ -1,44 +1,61 @@
 <!DOCTYPE html>
 <html>
 
-    <head>
-        <title>
-            Attend
-        </title>
+<head>
+    <title>Attend</title>
+
+    <link href="main.css" type="text/css" rel="stylesheet" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet" />
+</head>
+
+<body class="main">
+    <div id="mainContainer">
+        <img src="./assets/mainLogo.png" id="logo" />
+    </div>
+
+    <div id="dividerB"></div>
+
+    <div id="description">
+        <p>
+            If this is your first time using this extension then please click
+            <span id="highlight">"Update Configuration"</span> and fill in the
+            required details.
+        </p>
+        <a id="config" href="./htm/config.html">
+            <div id="configD">
+                <h2>Update Configuration</h2>
+            </div>
+        </a>
+    </div>
+
+    <div id="dividerO"></div>
+
+    <div id="description">
+        <p>Auto Submit Status : <span id="bool">Null</span></p>
+
+        <input type="text" id="url" value="" placeholder="Enter url here" />
+
+        <a id="mark" href="#">
+            <div id="markD">
+                <h2>Mark Attendence</h2>
+            </div>
+        </a>
+    </div>
+    <div id="dividerO"></div>
+
+    <div id="description2">
+        <a id="enroll" href="./htm/enroll.html">
+            <div id="enrollD">
+                <h2>Enroll for auto Attendence</h2>
+            </div>
+        </a>
+    </div>
+
+    <div id="description1">
         
-        <link href="main.css" type="text/css" rel="stylesheet" />
-        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
-    </head>
-
-    <body class="main">
-
-       <div id="mainContainer">
-            <img src="./assets/mainLogo.png" id="logo"/>
-       </div>
-
-       <div id="dividerB"></div>
-
-       <div id="description">
-            <p>If this is your first time using this extension then 
-                please click <span id="highlight">"Update Configuration"</span> and fill in 
-                the required details.</p>
-            <a id="config" href="config.html"><div id="configD"><h2>Update Configuration</h2></div></a>
-       </div>
-
-       <div id="dividerO"></div>
-
-       <div id="description">
-            <p>Auto Submit Status : <span id="bool">Null</span> </p>
-           
-            <input type="text" id="url" value="" placeholder="Enter url here">
-            
-            <a id="mark" href="#"><div id="markD"><h2>Mark Attendence</h2></div></a>
-       </div>
-       <div id="description1">
-        <p id="ver">Version : 1.0b (beta) </p>
-       </div>
-       <script src="./js/main.js"></script>
-      
-    </body>
+        <p id="ver">Version : 1.0b (beta)</p>
+    </div>
+    <script src="./js/main.js"></script>
+</body>
 
 </html>

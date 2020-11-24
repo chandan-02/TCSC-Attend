@@ -1,7 +1,7 @@
 .main {
     background-color: #fff;
-    width: 500px;
-    height:500px;
+    width: 512px;
+    height:512px;
     font-family: 'Poppins', sans-serif;
     font-size: 20px;
 }
@@ -13,6 +13,10 @@
     border-radius:10px;
 }
 #submit {
+    display: flex;
+    justify-content: center;
+}
+#enrollS {
     display: flex;
     justify-content: center;
 }
@@ -42,7 +46,11 @@
 #description {
     margin:17px;
 }
+#warning{
 
+    font-size: 15px !important;
+    color:red;
+}
 #description1 {
     margin:17px;
     display: flex;
@@ -58,6 +66,7 @@
 }
 
 #configD,
+#enroll,
 #markD{
     color:#ffffff;
     font-size:12px !important;
@@ -66,10 +75,18 @@
     padding-right:20px;
     background-color: #E27B2E;
     border-radius:10px;
+    text-decoration: none;
 }
 #markD,#gobackD {
     background-color: #24447F !important; 
 }
+#enroll {
+    background-color: #214252 !important; 
+}
+#description2 {
+    margin:17px;
+}
+
 
 #configD:hover{
     background-color: #B24F04;
@@ -90,3 +107,8 @@
     border:2px solid #D77B37;
     border-color:#D77B37
 }
+
+#enroll:hover {
+    background-color: #595b83 !important;
+}
+

@@ -1,14 +1,19 @@
 document.addEventListener('DOMContentLoaded',()=>{
     document.getElementById('mark').addEventListener('click',()=>{
         chrome.storage.sync.remove(['url'],function(){
-            console.log("Previous Linked removed")
+            console.log("Previous Link removed")
         })
         newURL = document.getElementById("url").value
         chrome.storage.sync.set({
             'url':newURL
         },()=>{
             console.log("Processing...")
-            window.open(newURL)
+            // if (newURL != ""){
+            //     window.open(newURL)
+            // }
+            if(newURL.includes("https://")){
+                window.open(newURL)
+            }
         })
     })
 })
