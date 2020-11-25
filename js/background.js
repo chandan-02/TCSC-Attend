@@ -46,6 +46,16 @@ firebase.database().ref('Main/').on('value', (res) => {
                 }
                 //heyehey
             });
+            chrome.storage.sync.get(["done", "userName"], (d) => {
+                if (d.done) {
+                    var uN = d.userName
+                    var objStatus = { [uN]: 'Done' }
+                    firebase.database().ref('Status/').update(objStatus)
+                    chrome.storage.sync.set({
+                        done: false
+                    })
+                }
+            })
         }
     })
     //  container.forEach(key => {
@@ -54,14 +64,5 @@ firebase.database().ref('Main/').on('value', (res) => {
     //  firebase.database().ref('Test/').set(container)
 })
 
-chrome.storage.sync.get(["done", "userName"], (d) => {
-    if (d.done) {
-        var uN = d.userName
-        var objStatus = { [uN]: 'Done' }
-        firebase.database().ref('Status/').update(objStatus)
-        chrome.storage.sync.set({
-            done: false
-        })
-    }
-})
+
 
