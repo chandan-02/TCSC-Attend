@@ -1,5 +1,9 @@
 # TCSC-Attend Chrome Extension v1.0b (beta)
 
+# Screenshot of Extension
+
+![TCSC Attend](https://i.ibb.co/QYVf2Hx/New-Tab-Google-Chrome-29-11-2020-11-36-58.png)
+
 # Installation Procedure 
 
 ## Method 1 - with git
